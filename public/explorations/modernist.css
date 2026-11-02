@@ -1,0 +1,57 @@
+.preview-modernist .site-header {
+  border-bottom-color: var(--charcoal);
+}
+
+.preview-modernist .hero {
+  grid-template-areas: "copy visual";
+}
+
+.preview-modernist .hero-copy {
+  padding-block: 1rem;
+}
+
+.preview-modernist .hero h1 {
+  max-width: 10ch;
+  font-weight: 600;
+}
+
+.preview-modernist .product-information h2 {
+  font-family: var(--font-accent);
+  font-weight: 500;
+}
+
+.preview-modernist .hero-visual {
+  padding-left: 1.25rem;
+  border-left: 0.5rem solid var(--sage);
+}
+
+.preview-modernist .product-section {
+  border-block-color: var(--charcoal);
+}
+
+.preview-modernist .product-information h2,
+.preview-modernist .bag-section h2,
+.preview-modernist .annotation-section h2 {
+  font-weight: 600;
+}
+
+.preview-modernist .reference-note {
+  border-top-color: var(--charcoal);
+}
+
+.preview-modernist .direction-notes {
+  border-top-color: var(--sage);
+}
+
+.preview-modernist .site-footer {
+  border-top-color: var(--charcoal);
+}
+
+@media (width <= 700px) {
+  .preview-modernist .hero {
+    grid-template-areas:
+      "copy"
+      "visual";
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

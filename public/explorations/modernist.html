@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Modernist hero preview for the proposed COMMON THREAD brand. Fictional demo product and price."
+    />
+    <title>COMMON THREAD | Modernist preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="preview-base.css" />
+    <link rel="stylesheet" href="modernist.css" />
+    <script src="../shop.js" defer></script>
+  </head>
+  <body class="preview preview-modernist">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page-shell">
+      <header class="site-header frame">
+        <a class="wordmark" href="modernist.html">COMMON THREAD</a>
+        <nav class="main-nav" aria-label="Preview directions">
+          <a class="nav-link" href="modernist.html" aria-current="page"
+            >Modernist</a
+          >
+          <a class="nav-link" href="postmodernist.html">Postmodernist</a>
+          <a class="nav-link" href="../index.html">Neutral storefront</a>
+        </nav>
+        <a class="bag-link" href="#demo-bag" aria-label="View demo bag">
+          Demo bag <span id="bag-count" class="bag-count">0</span>
+        </a>
+      </header>
+
+      <main id="main" class="frame">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow">BRAND 001 / EVERYDAY LIFESTYLE</p>
+            <h1 id="hero-title">Different lives. One common thread.</h1>
+            <p class="hero-support">
+              Made to fit into your everyday life and personal style.
+            </p>
+            <a class="hero-cta" href="#product-form">
+              Find your fit. <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+          <figure class="hero-visual">
+            <img
+              class="lifestyle-photo"
+              src="assets/lifestyle-priscilla-du-preez.jpg"
+              alt="People laughing and talking together outside during daytime."
+              width="1600"
+              height="1067"
+              fetchpriority="high"
+            />
+            <figcaption class="photo-credit">
+              Natural light. Everyday connection. Photo by
+              <a
+                href="https://unsplash.com/photos/people-laughing-and-talking-outside-during-daytime-nF8xhLMmg0c"
+                >Priscilla du Preez / Unsplash</a
+              >.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="product-section" aria-labelledby="product-name">
+          <figure class="product-visual">
+            <img
+              class="shirt-image"
+              src="../assets/white-shirt.svg"
+              alt="Plain white, unbranded, short-sleeved T-shirt"
+              width="800"
+              height="880"
+            />
+            <figcaption>The Everyday White Tee / Color: White</figcaption>
+          </figure>
+          <div class="product-information">
+            <p class="eyebrow">COMMON THREAD / EVERYDAY ESSENTIALS</p>
+            <h2 id="product-name">The Everyday White Tee</h2>
+            <div class="price-row">
+              <p><strong>$28 USD</strong></p>
+              <span class="micro-label">Fictional demo price</span>
+            </div>
+            <form id="product-form" class="product-form" novalidate>
+              <fieldset aria-describedby="size-help size-error">
+                <legend>Choose a size</legend>
+                <p id="size-help" class="field-help">
+                  Demo sizes: S, M, L, and XL.
+                </p>
+                <div class="size-options">
+                  <label class="size-option"
+                    ><input type="radio" name="size" value="S" /><span
+                      >S</span
+                    ></label
+                  >
+                  <label class="size-option"
+                    ><input type="radio" name="size" value="M" /><span
+                      >M</span
+                    ></label
+                  >
+                  <label class="size-option"
+                    ><input type="radio" name="size" value="L" /><span
+                      >L</span
+                    ></label
+                  >
+                  <label class="size-option"
+                    ><input type="radio" name="size" value="XL" /><span
+                      >XL</span
+                    ></label
+                  >
+                </div>
+                <p id="size-error" class="field-error" role="alert" hidden>
+                  Choose a size before adding the shirt to your demo bag.
+                </p>
+                <button class="submit-button" type="submit">
+                  Add to demo bag
+                </button>
+              </fieldset>
+            </form>
+            <p class="demo-disclaimer">
+              Fictional product data. This demo collects no payment or personal
+              information and places no order.
+            </p>
+          </div>
+        </section>
+
+        <section id="demo-bag" class="bag-section" aria-labelledby="bag-title">
+          <h2 id="bag-title">Your demo bag</h2>
+          <div>
+            <p
+              id="bag-status"
+              class="bag-message"
+              role="status"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              Your demo bag is empty. Choose a size to try it.
+            </p>
+            <ul id="bag-items" class="bag-items"></ul>
+            <button id="clear-bag" class="text-button" type="button" disabled>
+              Empty demo bag
+            </button>
+            <p class="field-help">The bag resets when this page reloads.</p>
+          </div>
+        </section>
+
+        <section class="annotation-section" aria-labelledby="annotations-title">
+          <p class="eyebrow">DESIGN STUDY / MODERNIST</p>
+          <h2 id="annotations-title">Reference notes</h2>
+          <p class="annotation-intro">
+            Historical works are cited as references, not reproduced or
+            presented as COMMON THREAD artwork.
+          </p>
+          <div class="reference-grid">
+            <article class="reference-note">
+              <h3>Drawing</h3>
+              <p>Edward McKnight Kauffer, 1934. V&amp;A, object E.3770-2004.</p>
+              <p>
+                The viewed image uses a black geometric figure and spiral
+                against a pale ground. This preview borrows its high contrast
+                and use of negative space, not its figure or composition.
+              </p>
+              <a href="https://www.vam.ac.uk/articles/what-was-modernism"
+                >V&amp;A, What was Modernism?</a
+              >
+            </article>
+            <article class="reference-note">
+              <h3>Dell-Lampe Type K</h3>
+              <p>
+                Christian Dell, 1929; made by Zimmermann GmbH. V&amp;A, object
+                M.27-1992.
+              </p>
+              <p>
+                The viewed lamp presents a clear task light, vertical support,
+                joints, and base. This preview borrows visible function and
+                purposeful structure, not the lamp's form.
+              </p>
+              <a href="https://www.vam.ac.uk/articles/what-was-modernism"
+                >V&amp;A, What was Modernism?</a
+              >
+            </article>
+          </div>
+          <div class="direction-notes">
+            <h3>Direction choices</h3>
+            <ul>
+              <li>
+                A deliberate two-column grid aligns image and information.
+              </li>
+              <li>
+                DM Sans carries the headline and controls; Lora stays an accent.
+              </li>
+              <li>
+                Fine rules and restrained Sage accents keep price and sizes easy
+                to scan.
+              </li>
+            </ul>
+            <p>
+              <strong>Intended audience effect (hypothesis):</strong> The clear
+              hierarchy and functional structure may feel approachable and
+              dependable, making the offer easier to understand without
+              overwhelming the customer.
+            </p>
+            <p>
+              <strong>Risk:</strong> The restrained system could feel too
+              neutral and understate the Creator archetype's individuality.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer frame">
+        <p>COMMON THREAD / Modernist preview / Fictional demo only</p>
+        <a href="postmodernist.html">Compare the Postmodernist direction</a>
+      </footer>
+    </div>
+  </body>
+</html>

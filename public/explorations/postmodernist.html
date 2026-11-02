@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Postmodernist hero preview for the proposed COMMON THREAD brand. Fictional demo product and price."
+    />
+    <title>COMMON THREAD | Postmodernist preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="preview-base.css" />
+    <link rel="stylesheet" href="postmodernist.css" />
+    <script src="../shop.js" defer></script>
+  </head>
+  <body class="preview preview-postmodernist">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page-shell">
+      <header class="site-header frame">
+        <a class="wordmark" href="postmodernist.html">COMMON THREAD</a>
+        <nav class="main-nav" aria-label="Preview directions">
+          <a class="nav-link" href="modernist.html">Modernist</a>
+          <a class="nav-link" href="postmodernist.html" aria-current="page"
+            >Postmodernist</a
+          >
+          <a class="nav-link" href="../index.html">Neutral storefront</a>
+        </nav>
+        <a class="bag-link" href="#demo-bag" aria-label="View demo bag">
+          Demo bag <span id="bag-count" class="bag-count">0</span>
+        </a>
+      </header>
+
+      <main id="main" class="frame">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow">BRAND 001 / EVERYDAY LIFESTYLE</p>
+            <h1 id="hero-title">
+              Different lives. <span>One common thread.</span>
+            </h1>
+            <p class="hero-support">
+              Made to fit into your everyday life and personal style.
+            </p>
+            <a class="hero-cta" href="#product-form">
+              Find your fit. <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+          <figure class="hero-visual">
+            <img
+              class="lifestyle-photo"
+              src="assets/lifestyle-priscilla-du-preez.jpg"
+              alt="People laughing and talking together outside during daytime."
+              width="1600"
+              height="1067"
+              fetchpriority="high"
+            />
+            <figcaption class="photo-credit">
+              Natural light. Everyday connection. Photo by
+              <a
+                href="https://unsplash.com/photos/people-laughing-and-talking-outside-during-daytime-nF8xhLMmg0c"
+                >Priscilla du Preez / Unsplash</a
+              >.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="product-section" aria-labelledby="product-name">
+          <figure class="product-visual">
+            <img
+              class="shirt-image"
+              src="../assets/white-shirt.svg"
+              alt="Plain white, unbranded, short-sleeved T-shirt"
+              width="800"
+              height="880"
+            />
+            <figcaption>The Everyday White Tee / Color: White</figcaption>
+          </figure>
+          <div class="product-information">
+            <p class="eyebrow">COMMON THREAD / EVERYDAY ESSENTIALS</p>
+            <h2 id="product-name">The Everyday White Tee</h2>
+            <div class="price-row">
+              <p><strong>$28 USD</strong></p>
+              <span class="micro-label">Fictional demo price</span>
+            </div>
+            <form id="product-form" class="product-form" novalidate>
+              <fieldset aria-describedby="size-help size-error">
+                <legend>Choose a size</legend>
+                <p id="size-help" class="field-help">
+                  Demo sizes: S, M, L, and XL.
+                </p>
+                <div class="size-options">
+                  <label class="size-option"
+                    ><input type="radio" name="size" value="S" /><span
+                      >S</span
+                    ></label
+                  >
+                  <label class="size-option"
+                    ><input type="radio" name="size" value="M" /><span
+                      >M</span
+                    ></label
+                  >
+                  <label class="size-option"
+                    ><input type="radio" name="size" value="L" /><span
+                      >L</span
+                    ></label
+                  >
+                  <label class="size-option"
+                    ><input type="radio" name="size" value="XL" /><span
+                      >XL</span
+                    ></label
+                  >
+                </div>
+                <p id="size-error" class="field-error" role="alert" hidden>
+                  Choose a size before adding the shirt to your demo bag.
+                </p>
+                <button class="submit-button" type="submit">
+                  Add to demo bag
+                </button>
+              </fieldset>
+            </form>
+            <p class="demo-disclaimer">
+              Fictional product data. This demo collects no payment or personal
+              information and places no order.
+            </p>
+          </div>
+        </section>
+
+        <section id="demo-bag" class="bag-section" aria-labelledby="bag-title">
+          <h2 id="bag-title">Your demo bag</h2>
+          <div>
+            <p
+              id="bag-status"
+              class="bag-message"
+              role="status"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              Your demo bag is empty. Choose a size to try it.
+            </p>
+            <ul id="bag-items" class="bag-items"></ul>
+            <button id="clear-bag" class="text-button" type="button" disabled>
+              Empty demo bag
+            </button>
+            <p class="field-help">The bag resets when this page reloads.</p>
+          </div>
+        </section>
+
+        <section class="annotation-section" aria-labelledby="annotations-title">
+          <p class="eyebrow">DESIGN STUDY / POSTMODERNIST</p>
+          <h2 id="annotations-title">Reference notes</h2>
+          <p class="annotation-intro">
+            Historical works are cited as references, not reproduced or
+            presented as COMMON THREAD artwork.
+          </p>
+          <div class="reference-grid">
+            <article class="reference-note">
+              <h3>Concrete Stereo</h3>
+              <p>Ron Arad, 1983. V&amp;A, object W.7-2011.</p>
+              <p>
+                The viewed stereo places separated components in rough concrete
+                blocks. This preview borrows the material contrast and
+                juxtaposition, not the object or its image.
+              </p>
+              <a href="https://www.vam.ac.uk/articles/what-is-postmodernism"
+                >V&amp;A, What is Postmodernism?</a
+              >
+            </article>
+            <article class="reference-note">
+              <h3>Super lamp prototype</h3>
+              <p>
+                Martine Bedin (for Memphis), 1981; made by Fausto Celati.
+                V&amp;A, object M.1-2011.
+              </p>
+              <p>
+                The viewed lamp combines a wheeled blue body with repeated
+                colored bulb sockets. This preview borrows playful repetition
+                and asymmetry, not the lamp's shape.
+              </p>
+              <a href="https://www.vam.ac.uk/articles/what-is-postmodernism"
+                >V&amp;A, What is Postmodernism?</a
+              >
+            </article>
+          </div>
+          <div class="direction-notes">
+            <h3>Direction choices</h3>
+            <ul>
+              <li>
+                An offset image frame and overlapping color planes make the
+                composition asymmetrical.
+              </li>
+              <li>
+                DM Sans and Lora mix voices while the words remain identical to
+                the Modernist preview.
+              </li>
+              <li>
+                Repeated geometry and Sage/Sand blocks add play without changing
+                the product or controls.
+              </li>
+            </ul>
+            <p>
+              <strong>Intended audience effect (hypothesis):</strong> The
+              expressive composition may make individuality and creativity more
+              immediately visible while the shared image and message preserve
+              the invitation to belong.
+            </p>
+            <p>
+              <strong>Risk:</strong> The layering and contrast may feel too busy
+              or less universally approachable, as the learner predicted.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer frame">
+        <p>COMMON THREAD / Postmodernist preview / Fictional demo only</p>
+        <a href="modernist.html">Compare the Modernist direction</a>
+      </footer>
+    </div>
+  </body>
+</html>

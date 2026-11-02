@@ -5,35 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="An unfinished, neutral T-shirt storefront for the IS117 Brand Studio. Build a brand through deliberate, visible design choices."
+      content="COMMON THREAD makes approachable everyday clothing centered on comfort, versatility, and belonging. Fictional demo product."
     />
-    <title>Your Brand — neutral storefront starter</title>
+    <title>COMMON THREAD — Everyday essentials</title>
     <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="shop.js" defer></script>
   </head>
-  <body>
+  <body class="storefront">
     <a class="skip-link" href="#main">Skip to content</a>
-    <aside class="starter-notice" aria-label="Starter information">
-      <span
-        ><strong>Unfinished by design.</strong> This is a neutral teaching
-        starter. Replace its identity after your brand decisions.</span
-      >
-      <a href="studio.html"
-        >Enter the studio <span aria-hidden="true">↗</span></a
-      >
-    </aside>
     <header class="site-header wrap">
       <a
         class="brand-link"
         href="index.html"
-        aria-label="Your Brand storefront home"
+        aria-label="COMMON THREAD storefront home"
         ><img
-          class="wordmark"
+          class="storefront-logo"
           src="assets/wordmark.svg"
-          alt="Neutral starter wordmark"
-          width="175"
-          height="26"
+          alt=""
+          width="176"
+          height="31"
       /></a>
       <nav class="main-nav" aria-label="Main navigation">
         <a class="nav-link" href="index.html" aria-current="page">Shop</a>
@@ -48,42 +45,73 @@
     </header>
 
     <main id="main">
+      <section class="brand-hero wrap" aria-labelledby="hero-title">
+        <div class="brand-hero-copy">
+          <p class="eyebrow">EVERYDAY LIFESTYLE / COMMON THREAD</p>
+          <h1 id="hero-title">Different lives. One common thread.</h1>
+          <p class="brand-hero-support">
+            Made to fit into your everyday life and personal style.
+          </p>
+          <a class="button button-primary brand-cta" href="#size-selector">
+            Find your fit. <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+        <figure class="brand-hero-visual">
+          <img
+            class="brand-lifestyle-image"
+            src="explorations/assets/lifestyle-priscilla-du-preez.jpg"
+            alt="People laughing and talking together outside during daytime."
+            width="1600"
+            height="1067"
+            fetchpriority="high"
+          />
+          <figcaption class="brand-photo-credit">
+            Natural light. Everyday connection. Photo by
+            <a
+              href="https://unsplash.com/photos/people-laughing-and-talking-outside-during-daytime-nF8xhLMmg0c"
+              >Priscilla du Preez / Unsplash</a
+            >, used under the
+            <a href="https://unsplash.com/license">Unsplash License</a>.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="brand-values wrap" aria-label="COMMON THREAD messages">
+        <div class="brand-value">
+          <p class="eyebrow">EVERYMAN / PRIMARY</p>
+          <h2>Everyone belongs.</h2>
+        </div>
+        <p class="brand-tagline">A versatile essential. A place to belong.</p>
+        <div class="brand-value brand-value-creator">
+          <p class="eyebrow">CREATOR / SECONDARY</p>
+          <h2>Express who you are.</h2>
+        </div>
+      </section>
+
       <section class="product-section wrap" aria-labelledby="product-title">
-        <div class="product-visual">
-          <div class="visual-label">
-            <span>001 / The starting point</span><span>Unbranded</span>
-          </div>
+        <figure class="product-visual">
           <img
             class="shirt-image"
             src="assets/white-shirt.svg"
-            alt="Plain white, unbranded short-sleeved T-shirt"
+            alt="Plain white short-sleeved T-shirt"
             width="800"
             height="880"
             fetchpriority="high"
           />
-          <div class="image-caption">
-            <span>One product. Room for your point of view.</span
-            ><span aria-hidden="true">↙</span>
-          </div>
-        </div>
+          <figcaption>The Everyday White Tee / Color: White</figcaption>
+        </figure>
         <div class="product-information">
-          <p class="eyebrow">
-            <span class="status-dot" aria-hidden="true"></span> Neutral product
-            / demo only
-          </p>
-          <h1 id="product-title">The white<br />T-shirt.</h1>
-          <p class="product-intro">A plain shirt. A place to begin.</p>
-          <p class="muted product-description">
-            This starter has a working product page and room for a brand. Its
-            audience, personality, message, and visual direction are still yours
-            to decide.
-          </p>
+          <p class="eyebrow">COMMON THREAD / EVERYDAY ESSENTIALS</p>
+          <h2 id="product-title">The Everyday White Tee</h2>
           <div class="price-row">
             <p class="price">$28 <span>USD</span></p>
             <span class="micro-label">Fictional demo price</span>
           </div>
           <form id="product-form" class="product-form" novalidate>
-            <fieldset aria-describedby="size-help size-error">
+            <fieldset
+              id="size-selector"
+              aria-describedby="size-help size-error"
+            >
               <legend>Choose a size</legend>
               <p id="size-help" class="field-help">
                 Demo sizes: S, M, L, and XL.
@@ -119,8 +147,8 @@
             </button>
           </form>
           <p class="demo-disclaimer">
-            A classroom interaction, using fictional product data. No order,
-            payment, or personal information is collected.
+            Fictional product data. This demo collects no payment or personal
+            information and places no order.
           </p>
           <dl class="product-facts">
             <div>
@@ -129,13 +157,34 @@
             </div>
             <div>
               <dt>Brand identity</dt>
-              <dd>Not decided yet</dd>
+              <dd>COMMON THREAD</dd>
             </div>
             <div>
               <dt>Product claims</dt>
               <dd>None supplied</dd>
             </div>
           </dl>
+        </div>
+      </section>
+
+      <section
+        class="brand-purpose wrap"
+        aria-label="COMMON THREAD mission and vision"
+      >
+        <div>
+          <p class="eyebrow">MISSION</p>
+          <p>
+            Create approachable everyday clothing that brings people together
+            through comfort, versatility, and shared identity.
+          </p>
+        </div>
+        <div>
+          <p class="eyebrow">VISION</p>
+          <p>
+            Build a welcoming lifestyle brand where people from different
+            backgrounds can feel connected without sacrificing their
+            individuality.
+          </p>
         </div>
       </section>
 
@@ -167,29 +216,14 @@
           </p>
         </div>
       </section>
-
-      <section class="starter-next wrap" aria-labelledby="next-title">
-        <p class="eyebrow">For the person building this site</p>
-        <h2 id="next-title">The shirt stays.<br />The story is your work.</h2>
-        <div>
-          <p>
-            Choose who this is for, decide what the brand should express, and
-            make those choices visible. Keep the storefront and its
-            <a href="styleguide.html">live style guide</a> in sync.
-          </p>
-          <a class="button button-secondary" href="studio.html"
-            >See the studio brief <span aria-hidden="true">↗</span></a
-          >
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer wrap">
       <p>
-        IS117 Brand Studio <span class="footer-separator"> / </span> Neutral
-        starter
+        COMMON THREAD <span class="footer-separator"> / </span> Everyday
+        lifestyle clothing and essentials
       </p>
-      <p class="footer-tagline">Fictional product. Real design decisions.</p>
+      <p class="footer-tagline">A versatile essential. A place to belong.</p>
       <a href="https://github.com/kaw393939/is117-brand-studio#readme"
         >Project README <span aria-hidden="true">↗</span></a
       >
