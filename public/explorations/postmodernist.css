@@ -1,0 +1,134 @@
+.preview-postmodernist .site-header {
+  border-bottom: 0.2rem solid var(--charcoal);
+  background: var(--sand);
+}
+
+.preview-postmodernist .wordmark {
+  padding: 0.25rem 0.4rem;
+  background: var(--charcoal);
+  color: var(--warm-ivory);
+}
+
+.preview-postmodernist .site-header :focus-visible,
+.preview-postmodernist .product-section .size-option:focus-within,
+.preview-postmodernist .product-section input:focus-visible {
+  outline-color: var(--charcoal);
+}
+
+.preview-postmodernist .hero {
+  grid-template-areas: "visual copy";
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 2.75rem;
+}
+
+.preview-postmodernist .hero-visual {
+  position: relative;
+  isolation: isolate;
+  padding: 1.1rem 0 1.1rem 1.1rem;
+}
+
+.preview-postmodernist .hero-visual::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 0 2.5rem;
+  background: var(--sand);
+  content: "";
+}
+
+.preview-postmodernist .hero h1 {
+  max-width: 12ch;
+  font-family: var(--font-accent);
+  font-size: 3.6rem;
+  font-weight: 500;
+}
+
+.preview-postmodernist .hero-support {
+  max-width: 27rem;
+  padding-left: 1rem;
+  border-left: 0.35rem solid var(--sage);
+}
+
+.preview-postmodernist .hero-cta {
+  transform: rotate(-1deg);
+}
+
+.preview-postmodernist .product-section {
+  position: relative;
+  border-top: 0.2rem solid var(--charcoal);
+  background: var(--sand);
+}
+
+.preview-postmodernist .product-visual {
+  background: var(--warm-ivory);
+  box-shadow: 0.6rem 0.6rem 0 var(--sage);
+}
+
+.preview-postmodernist .product-information h2 {
+  max-width: 12ch;
+  font-family: var(--font-accent);
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+
+.preview-postmodernist .price-row {
+  width: fit-content;
+  padding: 0.35rem 0.65rem;
+  background: var(--charcoal);
+  color: var(--warm-ivory);
+}
+
+.preview-postmodernist .micro-label {
+  color: var(--warm-ivory);
+}
+
+.preview-postmodernist .reference-note:nth-child(odd) {
+  padding-right: 1rem;
+  border-top: 0.3rem solid var(--sage);
+}
+
+.preview-postmodernist .reference-note:nth-child(even) {
+  padding-left: 1rem;
+  border-top: 0.3rem solid var(--sand);
+}
+
+.preview-postmodernist .direction-notes {
+  padding: 1.25rem;
+  background: var(--charcoal);
+  color: var(--warm-ivory);
+}
+
+.preview-postmodernist .direction-notes h3 {
+  font-family: var(--font-accent);
+  font-weight: 500;
+}
+
+.preview-postmodernist .site-footer {
+  border-top: 0.2rem solid var(--charcoal);
+}
+
+@media (width <= 700px) {
+  .preview-postmodernist .hero {
+    grid-template-areas:
+      "copy"
+      "visual";
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    padding-block: 2.25rem 2.75rem;
+  }
+
+  .preview-postmodernist .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .preview-postmodernist .hero-cta {
+    transform: none;
+  }
+
+  .preview-postmodernist .product-section {
+    background: transparent;
+  }
+
+  .preview-postmodernist .reference-note:nth-child(even) {
+    padding-left: 0;
+  }
+}

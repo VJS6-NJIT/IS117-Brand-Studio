@@ -2,7 +2,19 @@
 
 **The same white T-shirt can carry very different meanings.** Develop a brand for it with an AI collaborator, then make those decisions visible in a professional website and a live style guide.
 
-This template starts with a working, deliberately neutral storefront. Your audience, name, promise, logo, voice, and visual direction are **not chosen yet**. You make the decisions; the agent helps you explore, build, check, and revise them.
+This repository contains the completed implementation of the COMMON THREAD `BRAND-001` project slice. The brand decisions and evidence are recorded in [SPEC.md](SPEC.md); GitHub review and submission steps remain below.
+
+## Current project: COMMON THREAD
+
+- **Selected direction:** Modernist.
+- **Audience hypotheses:** The Everyday Individual (primary) seeks a comfortable, versatile white T-shirt for everyday activities; The Personal Style Seeker (secondary) sees simple essentials as a base for individual style. Both remain hypotheses, not validated customer research.
+- **Primary voice traits:** Friendly, Inclusive, and Straightforward. Confident and Conversational are supporting characteristics.
+- **Storefront:** The Everyday White Tee, a fictional $28 USD demo item in White, sizes S, M, L, and XL. Visitors can choose a size, receive missing-size feedback, add multiple sizes to a temporary demo bag, see items by size, empty the bag, and reset it on reload. There is no checkout, payment, account, or persistent shopping.
+- **Identity assets:** Original full-color, monochrome, and reversed SVG logo variants are in `public/assets/`.
+- **Design references:** Live style guide at `public/styleguide.html`, with Modernist and Postmodernist comparison previews under `public/explorations/`.
+- **Ethical persuasion:** Unity uses the shared belonging language; Liking uses the approachable voice and visual presentation, including the credited illustrative lifestyle photograph.
+- **Current verification:** `npm run check` passed Prettier, lint, 7 server tests, and 28 Playwright tests. Coverage includes the storefront, style guide, previews, accessibility checks, and Postmodernist CTA behavior at desktop and 375px mobile widths. The learner reported successful desktop style-guide, narrow-width, and keyboard checks. These checks are not customer research or proof of complete accessibility.
+- **Submission status:** The feature issue is open; no PR, merge, or deployment URL is recorded. Review [LEARNING.md](LEARNING.md) for accuracy before committing or pushing it.
 
 **A short record, visible to you:** your AI coach updates [LEARNING.md](LEARNING.md) with brief task-related explanations, observations and help received. It is AI-drafted, not a full transcript, and may be public with your repository. Review it and correct or remove excerpts before they are committed or pushed. Your instructor uses it alongside the project with this [simple three-part rubric](docs/assessment.md); the AI does not assign your grade.
 
@@ -31,7 +43,7 @@ This template starts with a working, deliberately neutral storefront. Your audie
 
 Save an HTML, CSS, JavaScript, or asset file under `public/` to refresh the local browser automatically; unsaved edits do not appear. A refresh resets the temporary demo bag. `npm start` is an alias for this same development mode. Press **Ctrl+C** in the terminal running the server to stop it. To switch to a plain preview, stop the server first, then use `npm run preview` and reopen its printed address. Refresh the browser yourself after saving. These commands serve your local files; publishing to GitHub Pages is a later step.
 
-**First success checkpoint:** you can see the neutral white T-shirt page, choose a size, and add it to the demo bag. Tell the agent what you actually see. The bag is a demonstration; it does not take payments, persist between visits, or place orders.
+**First success checkpoint:** you can see the COMMON THREAD storefront, choose a size, and add it to the demo bag. The bag is temporary and resets on reload; it does not take payments or place orders.
 
 If a command fails, paste the real error into the same chat. If the port is in use, let the agent help you stop your earlier preview or use `PORT=5175 npm run dev`, then open its printed address. You can ask for a hint, an example, or a small recommendation at any time. You do not need to know the branding vocabulary first.
 
@@ -56,7 +68,7 @@ You work at your own pace. There is no required class demonstration, quiz, separ
 
 | File                                   | Purpose                                                                                                    |
 | -------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `public/index.html`                    | Working storefront; the first branding feature is still pending                                            |
+| `public/index.html`                    | Modernist COMMON THREAD storefront with size selection and temporary demo bag                              |
 | `public/styleguide.html`               | Live identity board using the storefront's shared styles and assets                                        |
 | `public/studio.html`                   | Short studio overview, also [available online](https://kaw393939.github.io/is117-brand-studio/studio.html) |
 | [SPEC.md](SPEC.md)                     | The concise record of your chosen decisions and evidence                                                   |

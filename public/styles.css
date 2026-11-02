@@ -20,6 +20,9 @@
   --space-4: 2rem;
   --space-5: 3rem;
   --space-6: 4rem;
+  --storefront-header-min-height: 82px;
+  --storefront-hero-padding-block: 3.5rem 4rem;
+  --storefront-product-padding-block: 2.5rem;
   --page-width: 1440px;
 }
 
@@ -456,8 +459,13 @@ legend {
   color: var(--color-paper);
 }
 
+.brand-cta {
+  min-height: 3.1rem;
+}
+
 .button-primary:hover {
-  background: var(--color-accent);
+  border-color: var(--color-soft);
+  background: var(--color-soft);
   color: var(--color-ink);
 }
 
@@ -729,22 +737,46 @@ legend {
   letter-spacing: -0.04em;
 }
 
+.purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.purpose-card {
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--color-line);
+}
+
+.purpose-card h3 {
+  font-size: 0.85rem;
+  font-weight: 650;
+}
+
+.purpose-card p {
+  max-width: 38rem;
+  margin-top: 0.5rem;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+}
+
 .logo-board {
   min-height: 230px;
   display: grid;
   place-items: center;
   padding: 3rem;
-  background: var(--color-white);
+  background: #eae9e1;
   border: 1px solid var(--color-line);
 }
 
 .logo-board img {
-  width: min(100%, 380px);
+  width: min(100%, 420px);
 }
 
 .logo-variants {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border: 1px solid var(--color-line);
   border-top: 0;
 }
@@ -762,14 +794,22 @@ legend {
   border-left: 1px solid var(--color-line);
 }
 
-.logo-small {
-  width: 110px;
+.logo-preview-small {
+  width: 176px;
   height: auto;
 }
 
-.logo-mono {
-  width: 190px;
-  filter: brightness(0);
+.logo-preview-mono {
+  width: 220px;
+  height: auto;
+}
+
+.logo-variant-light {
+  background: #eae9e1;
+}
+
+.logo-variant-dark {
+  background: #30332e;
 }
 
 .logo-variant p,
@@ -849,6 +889,12 @@ legend {
   max-width: 570px;
 }
 
+.type-accent {
+  font-family: var(--font-accent);
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  line-height: 1.35;
+}
+
 .type-mono {
   font-family: var(--font-mono);
   text-transform: uppercase;
@@ -885,6 +931,28 @@ legend {
   font-size: 0.65rem;
 }
 
+.spacing-details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.spacing-detail {
+  display: grid;
+  gap: 0.35rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--color-line);
+  color: var(--color-muted);
+  font-size: 0.72rem;
+}
+
+.spacing-detail code {
+  color: var(--color-ink);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
 .button-samples {
   display: flex;
   flex-wrap: wrap;
@@ -910,6 +978,20 @@ legend {
 .voice-grid p {
   font-size: 0.84rem;
   color: var(--color-muted);
+}
+
+.voice-traits,
+.voice-phrases {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--color-muted);
+  font-size: 0.84rem;
+}
+
+.voice-phrases li {
+  font-family: var(--font-body);
 }
 
 .voice-example {
@@ -1281,6 +1363,14 @@ legend {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
+  .spacing-details {
+    grid-template-columns: 1fr;
+  }
+}
+
+.logo-variants .logo-variant-dark p {
+  color: #eae9e1;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1293,5 +1383,509 @@ legend {
   *::after {
     transition: none !important;
     animation: none !important;
+  }
+}
+
+body.styleguide,
+body.storefront {
+  --color-warm-ivory: #eae9e1;
+  --color-charcoal: #30332e;
+  --color-stone: #a5a18f;
+  --color-sand: #b7a28b;
+  --color-sage: #66745e;
+  --color-paper: var(--color-warm-ivory);
+  --color-ink: var(--color-charcoal);
+  --color-muted: var(--color-charcoal);
+  --color-line: var(--color-stone);
+  --color-accent: var(--color-sage);
+  --color-soft: var(--color-stone);
+  --font-body: "DM Sans", sans-serif;
+  --font-display: "DM Sans", sans-serif;
+  --font-accent: "Lora", serif;
+}
+
+body.styleguide {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.55;
+  letter-spacing: 0;
+}
+
+body.styleguide h1,
+body.styleguide h2,
+body.styleguide h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+body.storefront {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.55;
+  letter-spacing: 0;
+}
+
+body.storefront h1,
+body.storefront h2,
+body.storefront h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+body.storefront h1 {
+  font-size: 4rem;
+  line-height: 1.04;
+}
+
+body.storefront h2 {
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+body.storefront .wrap {
+  width: min(calc(100% - 3rem), 78rem);
+}
+
+body.storefront .site-header {
+  min-height: var(--storefront-header-min-height);
+  gap: 1.5rem;
+  border-bottom-color: var(--color-line);
+}
+
+body.storefront .brand-link {
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+body.storefront .storefront-logo {
+  display: block;
+  width: 176px;
+  height: auto;
+}
+
+body.storefront .main-nav {
+  gap: 0.5rem 1.25rem;
+}
+
+body.storefront .nav-link,
+body.storefront .bag-link {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  letter-spacing: 0;
+}
+
+body.storefront .brand-hero {
+  display: grid;
+  grid-template-areas: "copy visual";
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  align-items: center;
+  gap: 3rem;
+  padding-block: var(--storefront-hero-padding-block);
+}
+
+body.storefront .brand-hero-copy {
+  grid-area: copy;
+  max-width: 38rem;
+}
+
+body.storefront .brand-hero .eyebrow,
+body.storefront .brand-value .eyebrow,
+body.storefront .brand-purpose .eyebrow {
+  margin: 0 0 0.85rem;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+body.storefront .brand-hero h1 {
+  max-width: 10ch;
+  margin: 0;
+}
+
+body.storefront .brand-hero-support {
+  max-width: 34rem;
+  margin-top: 1.25rem;
+  font-size: 1.2rem;
+  line-height: 1.45;
+}
+
+body.storefront .brand-cta {
+  margin-top: 1.75rem;
+}
+
+body.storefront .button-primary:hover {
+  border-color: var(--color-soft);
+  background: var(--color-soft);
+  color: var(--color-ink);
+}
+
+body.storefront .brand-hero-visual {
+  grid-area: visual;
+  min-width: 0;
+  margin: 0;
+  padding-left: 1.25rem;
+  border-left: 0.5rem solid var(--color-accent);
+}
+
+body.storefront .brand-lifestyle-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+}
+
+body.storefront .brand-photo-credit {
+  margin-top: 0.55rem;
+  color: var(--color-ink);
+  font-size: 0.75rem;
+}
+
+body.storefront .brand-values {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.25fr) minmax(0, 0.8fr);
+  align-items: center;
+  gap: 1.5rem;
+  padding-block: 1.35rem;
+  border-block: 1px solid var(--color-line);
+}
+
+body.storefront .brand-value h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+body.storefront .brand-value-creator {
+  text-align: right;
+}
+
+body.storefront .brand-tagline {
+  margin: 0;
+  font-family: var(--font-accent);
+  font-size: 1.4rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+body.storefront .product-section {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 3rem;
+  padding-block: var(--storefront-product-padding-block);
+  border-block-color: var(--color-ink);
+}
+
+body.storefront .product-visual {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  min-height: 22rem;
+  place-items: center;
+  align-content: center;
+  margin: 0;
+  padding: 1.5rem;
+  background: var(--color-soft);
+}
+
+body.storefront .shirt-image {
+  width: min(100%, 19rem);
+  max-height: 21rem;
+  object-fit: contain;
+}
+
+body.storefront .product-visual figcaption {
+  justify-self: stretch;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+body.storefront .product-information {
+  max-width: 36rem;
+  padding: 0;
+}
+
+body.storefront .product-information .eyebrow {
+  margin: 0 0 0.45rem;
+  color: var(--color-ink);
+}
+
+body.storefront .product-information h2 {
+  max-width: 14ch;
+  margin: 0;
+  font-family: var(--font-accent);
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+
+body.storefront .price-row {
+  margin-block: 1rem;
+  padding-bottom: 0.9rem;
+  border-bottom-color: var(--color-line);
+}
+
+body.storefront .price-row .micro-label {
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0;
+}
+
+body.storefront .product-form legend {
+  font-size: 1rem;
+}
+
+body.storefront .field-help {
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
+
+body.storefront .size-options {
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+body.storefront .size-option span {
+  min-height: 3rem;
+  border-color: var(--color-line);
+  background: var(--color-paper);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  letter-spacing: 0;
+}
+
+body.storefront .size-option input:checked + span {
+  border-color: var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+body.storefront .size-option input:focus-visible + span {
+  outline: 3px solid var(--color-ink);
+  outline-offset: 3px;
+}
+
+body.storefront .add-button {
+  margin-top: 1rem;
+}
+
+body.storefront .demo-disclaimer {
+  color: var(--color-muted);
+  font-size: 0.8rem;
+}
+
+body.storefront .product-facts div {
+  border-top-color: var(--color-line);
+  font-size: 0.8rem;
+}
+
+body.storefront .product-facts dt {
+  color: var(--color-muted);
+}
+
+body.storefront .brand-purpose {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  padding-block: 2rem 3rem;
+  border-top: 1px solid var(--color-line);
+}
+
+body.storefront .brand-purpose p:not(.eyebrow) {
+  max-width: 38rem;
+  font-size: 0.95rem;
+}
+
+body.storefront .bag-section {
+  border-top-color: var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+body.storefront .bag-section h2 {
+  margin-top: 0.6rem;
+  font-size: 2.25rem;
+}
+
+body.storefront .bag-details {
+  padding-top: 0;
+}
+
+body.storefront .bag-message {
+  color: var(--color-ink);
+}
+
+body.storefront .bag-items li {
+  border-bottom-color: var(--color-line);
+}
+
+body.storefront .text-button {
+  color: var(--color-ink);
+}
+
+body.storefront .site-footer {
+  border-top-color: var(--color-line);
+  color: var(--color-muted);
+}
+
+body.storefront .site-footer a {
+  color: var(--color-ink);
+}
+
+@media (width <= 1100px) {
+  body.storefront .brand-hero {
+    gap: 2rem;
+  }
+
+  body.storefront .brand-hero h1 {
+    font-size: 3.35rem;
+  }
+
+  body.storefront .product-section {
+    gap: 2rem;
+  }
+}
+
+@media (width <= 760px) {
+  body.storefront .wrap {
+    width: calc(100% - 2.5rem);
+  }
+
+  body.storefront .site-header {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem 1rem;
+    padding-block: 1.1rem;
+  }
+
+  body.storefront .storefront-logo {
+    width: 164px;
+  }
+
+  body.storefront .main-nav {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+    gap: 0.5rem 1.25rem;
+    margin: 0;
+  }
+
+  body.storefront .nav-link,
+  body.storefront .bag-link {
+    font-size: 0.75rem;
+  }
+
+  body.storefront .bag-link {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  body.storefront .brand-hero {
+    grid-template-areas:
+      "copy"
+      "visual";
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    padding-block: 2.25rem 2.75rem;
+  }
+
+  body.storefront .brand-hero h1 {
+    max-width: 12ch;
+    font-size: 2.6rem;
+  }
+
+  body.storefront .brand-hero-support {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+  }
+
+  body.storefront .brand-cta {
+    margin-top: 1.25rem;
+  }
+
+  body.storefront .brand-hero-visual {
+    padding-left: 0.9rem;
+    border-left-width: 0.35rem;
+  }
+
+  body.storefront .brand-values {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding-block: 1.25rem;
+  }
+
+  body.storefront .brand-value-creator {
+    text-align: left;
+  }
+
+  body.storefront .brand-tagline {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+
+  body.storefront .product-section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    padding-block: 2rem;
+  }
+
+  body.storefront .product-visual {
+    min-height: 18rem;
+  }
+
+  body.storefront .shirt-image {
+    max-height: 17rem;
+  }
+
+  body.storefront .product-information {
+    max-width: none;
+  }
+
+  body.storefront .product-information h2 {
+    font-size: 2rem;
+  }
+
+  body.storefront .brand-purpose {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .purpose-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.storefront .bag-section {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding-block: 2rem;
+  }
+
+  body.storefront .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-block: 1.25rem;
+  }
+}
+
+@media (width <= 420px) {
+  body.storefront .wrap {
+    width: calc(100% - 2rem);
+  }
+
+  body.storefront .brand-hero h1 {
+    font-size: 2.35rem;
+  }
+
+  body.storefront .price-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.25rem;
   }
 }
