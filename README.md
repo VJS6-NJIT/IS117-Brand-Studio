@@ -14,7 +14,7 @@ This repository contains the completed implementation of the COMMON THREAD `BRAN
 - **Design references:** Live style guide at `public/styleguide.html`, with Modernist and Postmodernist comparison previews under `public/explorations/`.
 - **Ethical persuasion:** Unity uses the shared belonging language; Liking uses the approachable voice and visual presentation, including the credited illustrative lifestyle photograph.
 - **Current verification:** `npm run check` passed Prettier, lint, 7 server tests, and 28 Playwright tests. Coverage includes the storefront, style guide, previews, accessibility checks, and Postmodernist CTA behavior at desktop and 375px mobile widths. The learner reported successful desktop style-guide, narrow-width, and keyboard checks. These checks are not customer research or proof of complete accessibility.
-- **Submission status:** The feature issue is open; no PR, merge, or deployment URL is recorded. Review [LEARNING.md](LEARNING.md) for accuracy before committing or pushing it.
+- **Submission status:** BRAND-001 PR [#2](https://github.com/VJS6-NJIT/IS117-Brand-Studio/pull/2) is merged into `main`; no deployment URL is recorded. The learner reviewed and approved [LEARNING.md](LEARNING.md).
 
 **A short record, visible to you:** your AI coach updates [LEARNING.md](LEARNING.md) with brief task-related explanations, observations and help received. It is AI-drafted, not a full transcript, and may be public with your repository. Review it and correct or remove excerpts before they are committed or pushed. Your instructor uses it alongside the project with this [simple three-part rubric](docs/assessment.md); the AI does not assign your grade.
 
