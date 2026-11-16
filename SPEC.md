@@ -364,3 +364,155 @@ Publishing remains a separate choice; no deployment URL is recorded.
 ## Later
 
 No follow-up is selected. After keeping `BRAND-001`, choose one next cycle: perhaps a brand story, a supported fit guide, or richer demo-bag behavior. Agree its scope and add one new spec ID at that time.
+
+
+---
+
+# Review 2 — T-shirt Plan (November 16, 2026)
+
+## Purpose and relationship to BRAND-001
+
+This section records the next planning stage for the COMMON THREAD T-shirt project. It builds on the approved BRAND-001 decisions and does not rewrite the historical BRAND-001 scope or claim that planned features have been implemented.
+
+BRAND-001 delivered the first branded storefront and live style guide. Its product boundary explicitly excluded real orders, payment, accounts, and persistence. Review 2 plans the next product slice: a simulated checkout backed by a working SQLite database.
+
+## Audience and customer need
+
+The plan carries forward the existing audience hypotheses:
+
+- **Primary — The Everyday Individual:** An adult seeking a comfortable, versatile white T-shirt for casual outings, relaxing, and layering.
+- **Secondary — The Personal Style Seeker:** An adult who sees a simple wardrobe essential as a foundation for individual style and expression.
+
+These remain hypotheses, not findings from verified customer research.
+
+The primary customer need remains a comfortable, versatile white T-shirt for everyday activities, with personal expression and a feeling of welcome and inclusion.
+
+## Comparison of two design approaches
+
+The Modernist and Postmodernist previews were created using the same product, content, imagery, price, sizes, and interactive behavior. This kept the visual treatment as the main comparison variable.
+
+| Consideration | Modernist | Postmodernist |
+| --- | --- | --- |
+| Visual organization | Clear hierarchy, measured spacing, functional organization | Asymmetric balance, offset color planes, repeated geometric details |
+| Typography | DM Sans hierarchy with restrained Lora accent | More expressive use of DM Sans and Lora |
+| Intended effect | Approachable, dependable, and easy to understand | Individuality and creativity |
+| Consideration/risk | Could feel too neutral and understate personal expression | Could feel busy or less universally approachable |
+| Decision | **Selected** | Retained as comparison evidence |
+
+**Decision:** Keep the Modernist direction. The learner's stated reason was: “It better communicates comfort, simplicity, and belonging.” Its clear hierarchy, restrained palette, functional organization, and straightforward typography better support the intended everyday and inclusive identity. The Postmodernist alternative remains available in the repository as comparison evidence; it was not selected as the primary storefront direction.
+
+## Brand promise, visual choices, and ethical persuasion
+
+Carry forward the approved brand identity:
+
+- **Brand:** COMMON THREAD.
+- **Brand promise:** Clothing that fits into everyday life and makes everyone feel welcome.
+- **Brand tagline:** A versatile essential. A place to belong.
+- **Shared preview headline:** Different lives. One common thread.
+- **Supporting message:** Made to fit into your everyday life and personal style.
+- **Call to action:** Find your fit.
+- **Palette:** Warm Ivory `#EAE9E1`, Charcoal `#30332E`, Stone `#A5A18F`, Sand `#B7A28B`, Sage `#66745E`.
+- **Typography:** DM Sans primary; Lora accent.
+- **Imagery:** Natural lighting, everyday environments, inclusive lifestyle photography, and authentic interactions.
+
+Carry forward the two approved ethical persuasion principles:
+
+1. **Unity:** Shared identity and belonging are expressed through “Everyone belongs” and “Different lives. One common thread.” These are brand messages; do not imply an established customer community or group membership.
+2. **Liking:** Friendly, conversational copy, the warm restrained visual identity, and the credited everyday lifestyle photograph are intended to make the brand approachable and relatable. The photograph is illustrative, not a customer testimonial or proof of measured customer affinity.
+
+Do not add unsupported product claims, fabricated social proof, false scarcity, misleading discounts, or pressure tactics.
+
+## User stories, essential features, and observable checks
+
+The following stories define the planned customer experience. The checks below are acceptance checks to perform; they are not claims that the new features have already passed.
+
+### Story 1 — Understand the brand
+
+**User story:** As a visitor, I want to understand what COMMON THREAD stands for so I can decide whether the brand fits my preferences.
+
+**Essential feature:** Brand introduction with the approved promise, tagline, supporting message, and a clear route to the product.
+
+**Observable check:** On desktop and narrow mobile widths, verify that the brand name and approved messages are visible, readable, and consistent with the approved style guide. Verify that the “Find your fit” action takes the visitor to the product/size area.
+
+### Story 2 — Inspect the T-shirt
+
+**User story:** As a visitor, I want to see the T-shirt and its available information so I can decide whether I want to add it to my bag.
+
+**Essential feature:** Product image, product name, clearly identified fictional demo price, and available sizes.
+
+**Observable check:** Verify that the product image and product information load, that the demo price is clearly identified as fictional, and that the available sizes are shown. Do not add unsupported claims about fabric, manufacturing, sustainability, fit, delivery, or scarcity.
+
+### Story 3 — Select a size
+
+**User story:** As a customer, I want to select a size before adding the T-shirt so the item in my bag records my choice.
+
+**Essential feature:** Size selector with clear selected-state feedback and validation when no size is selected.
+
+**Observable check:** Select each available size and verify the selected value. Attempt to add the item without selecting a size and verify that helpful validation feedback appears and no incorrectly sized item is added.
+
+### Story 4 — Review the shopping bag
+
+**User story:** As a customer, I want to review the items and sizes in my bag so I can check my selection before checkout.
+
+**Essential feature:** Bag count, item-by-size listing, quantity or item management, removal, and an understandable empty-bag state.
+
+**Observable check:** Add items in different sizes and verify that the bag count and item details are accurate. Remove an item and verify the updated bag. Verify that an empty bag displays an appropriate empty state. The current demo bag is temporary; persistence is not claimed until the SQLite-backed order workflow is implemented and tested.
+
+### Story 5 — Complete a simulated checkout
+
+**User story:** As a customer, I want to submit a simulated checkout so I can receive confirmation that my order details were saved.
+
+**Essential feature:** Checkout form and validation, a simulated order-submission flow, a working SQLite backend, persistent order records, and an order-confirmation view. No real payment processing is part of this plan.
+
+**Observable check:** Complete a valid simulated checkout and verify that the application saves the order and its relevant item details to SQLite. Verify that invalid or incomplete checkout input is rejected with useful feedback and does not create an order. Stop and restart the application, then verify that the saved order remains available through the application or an appropriate database inspection. Verify that the confirmation corresponds to the saved order.
+
+## Implementation plan and boundaries
+
+The current storefront has product presentation, size selection, and a temporary demonstration shopping bag. The current SPEC records that BRAND-001 did not include real orders, payment, accounts, or persistence.
+
+The next implementation work is planned, not yet complete:
+
+1. Inspect the existing application structure and choose an SQLite integration that fits the current project.
+2. Implement database initialization and persistent order storage.
+3. Define the order data needed for the demo, including order identity, selected product/size, quantity, price used for the demo, and creation time as appropriate to the implementation.
+4. Connect valid simulated checkout submission to SQLite.
+5. Show an order confirmation only after the save succeeds.
+6. Handle validation and database errors without falsely reporting a successful order.
+7. Test persistence by restarting the application and verifying the saved order remains.
+
+**Out of scope:** Real payment processing, real customer accounts, claims of actual sales, and unsupported product claims. Do not treat browser localStorage or a temporary in-memory bag as the required SQLite backend.
+
+## Verification record
+
+**Existing evidence carried forward from BRAND-001:** The SPEC records that `npm run check` passed formatting, lint, 7 server tests, and 28 Playwright tests. It also records learner-reported desktop, narrow-width, and keyboard reviews. These results apply to the existing BRAND-001 work; they do not verify the planned SQLite or checkout features.
+
+**New Review 2 checks:** Pending implementation. Record actual test commands, results, and any manual observations after the SQLite and simulated checkout work is built.
+
+## Peer review and decision history
+
+**November 12 peer review:** No classmate feedback was received. No reviewer question or response is claimed.
+
+**Next action:** Request a classmate review or contact the instructor promptly to arrange another reviewer. Ask the reviewer to explain one user story and how its observable check demonstrates success. Record the actual feedback in a GitHub issue.
+
+For each suggestion, document one decision: implement, investigate, defer, or decline. Explain the reasoning. For accepted changes, link the relevant documentation or code commit/PR, describe the verification, and ask the reviewer to retry the check before closing the issue. Keep unresolved work open with a next step.
+
+**Peer-review issue:** Not yet created. Add its actual GitHub issue URL here after creating it; do not invent an issue number or link.
+
+## Repository and submission links
+
+- **Repository:** https://github.com/VJS6-NJIT/IS117-Brand-Studio
+- **SPEC:** https://github.com/VJS6-NJIT/IS117-Brand-Studio/blob/main/SPEC.md
+- **Competitive research directory:** https://github.com/VJS6-NJIT/IS117-Brand-Studio/tree/main/docs/explorations
+- **Published documentation site:** Not confirmed; add the actual URL when available.
+- **Deployed storefront:** Not confirmed; add the actual URL when available.
+- **Peer-review issue:** Pending creation.
+
+## Short progress update
+
+COMMON THREAD's BRAND-001 storefront and live style guide are complete, with the Modernist direction selected and the approved audience hypotheses, visual identity, brand promise, and Unity and Liking principles carried forward. The existing storefront supports product presentation, size selection, and a temporary demonstration shopping bag. The recorded BRAND-001 automated checks passed.
+
+Review 2 defines five customer stories and observable checks for understanding the brand, inspecting the product, selecting a size, reviewing the bag, and completing a simulated checkout. A working SQLite backend and persistent order storage are required for the checkout story, but neither has been implemented yet. No classmate feedback was received on November 12; a review request and instructor follow-up remain outstanding. Published documentation and deployment URLs have not yet been confirmed.
+
+## AI assistance disclosure
+
+ChatGPT assisted with organizing this plan, drafting user stories and observable checks, and identifying the planned SQLite and simulated-checkout work. The learner is responsible for reviewing the content, making project decisions, implementing the features, and verifying the results.
