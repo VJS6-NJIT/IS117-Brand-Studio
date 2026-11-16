@@ -496,7 +496,7 @@ The next implementation work is planned, not yet complete:
 
 For each suggestion, document one decision: implement, investigate, defer, or decline. Explain the reasoning. For accepted changes, link the relevant documentation or code commit/PR, describe the verification, and ask the reviewer to retry the check before closing the issue. Keep unresolved work open with a next step.
 
-**Peer-review issue:** Not yet created. Add its actual GitHub issue URL here after creating it; do not invent an issue number or link.
+**Peer-review issue:** [Issue #3 — COMMON THREAD Review 2](https://github.com/VJS6-NJIT/IS117-Brand-Studio/issues/3). The issue records the request for peer feedback; keep it open until feedback is received, reviewed, and any resulting changes are verified.
 
 ## Repository and submission links
 
@@ -505,7 +505,7 @@ For each suggestion, document one decision: implement, investigate, defer, or de
 - **Competitive research directory:** https://github.com/VJS6-NJIT/IS117-Brand-Studio/tree/main/docs/explorations
 - **Published documentation site:** Not confirmed; add the actual URL when available.
 - **Deployed storefront:** Not confirmed; add the actual URL when available.
-- **Peer-review issue:** Pending creation.
+- **Peer-review issue:** https://github.com/VJS6-NJIT/IS117-Brand-Studio/issues/3
 
 ## Short progress update
 
